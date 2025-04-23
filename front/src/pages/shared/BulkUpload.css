@@ -1,0 +1,85 @@
+/* src/pages/shared/BulkUploadSimple.css */
+
+/* ---------- Color Palette & Typography ---------- */
+:root {
+    --primary-color:    hsla(281, 63%, 45%, 0.866);
+    --accent-color:     #EA8C55;
+    --light-bg:         #F4FCD9;
+    --dark-text:        #333;
+    --light-text:       #fff;
+    --success-color:    #4caf50;
+    --error-color:      #f44336;
+    --font-sans:        'Montserrat', sans-serif;
+  }
+  
+  .bulk-upload {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-family: var(--font-sans);
+    color: var(--dark-text);
+  }
+  
+  .bulk-upload h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .bulk-upload input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .bulk-upload button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: var(--light-text);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  
+  .bulk-upload button:hover:not(:disabled) {
+    background: var(--accent-color);
+    transform: translateY(-1px);
+  }
+  
+  .bulk-upload button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .bulk-upload .result {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--success-color);
+    text-align: center;
+  }
+  
+  .bulk-upload .errors {
+    margin-top: 0.5rem;
+    color: var(--error-color);
+    list-style: inside disc;
+  }
+  
+  .bulk-upload .error {
+    margin-top: 1rem;
+    color: var(--error-color);
+    text-align: center;
+  }
+  

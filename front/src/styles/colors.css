@@ -1,0 +1,13 @@
+:root {
+    --primary-color: hsla(281, 63%, 45%, 0.866); 
+    --primary-dark: #225a1c;
+    --secondary-color: #d931af; 
+    --secondary-dark: #b07d31;
+    --accent-color: #EA8C55;
+    --light-bg: #F4FCD9;
+    --dark-text: #333;
+    --light-text: #fff;
+    --success-color: #4caf50;
+    --error-color: #f44336;
+  }
+  

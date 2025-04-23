@@ -1,0 +1,122 @@
+:root {
+    --clr-dark:   #1f2a47;
+    --clr-darker: #161d31;
+    --clr-accent: #3f63d3;
+    --clr-light:  #ffffff;
+    --blur:       14px;
+  }
+  
+  .dash-grid {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: 56px 1fr;
+    grid-template-areas:
+      "top  top"
+      "side page";
+    height: 100vh;
+    background: #f6f8fd;
+  }
+  
+  .bar {
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    background: rgba(255,255,255,.25);
+  }
+  
+  .topbar {
+    grid-area: top;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .9rem;
+    background: hsla(282, 60%, 88%, 0.866); 
+    color: black;
+  }
+  
+  .topbar h1 { font-size: 1.1rem; font-weight: 600; letter-spacing: .3px; }
+  
+  .logout-btn {
+    border: none;
+    background: transparent;
+    color: var(--clr-light);
+    cursor: pointer;
+    padding: 6px;
+    transition: transform .15s;
+  }
+  .logout-btn:hover { transform: scale(1.15); }
+  
+  .sidebar {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    padding: .7rem 0;
+    background: black;
+  }
+  
+  .nav-item {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9aa5ce;
+    position: relative;
+    transition: background .18s, color .18s;
+  }
+  
+  .nav-item .icon { pointer-events: none; }
+  
+  .nav-label {
+    position: absolute;
+    left: 64px;
+    opacity: 0;
+    padding: 6px 10px;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    border-radius: 6px;
+    transform: translateX(-8px);
+    transition: opacity .18s, transform .18s;
+    white-space: nowrap;
+    pointer-events: none;
+    font-size: .78rem;
+    font-weight: 500;
+  }
+  
+  .nav-item:hover {
+    background: rgba(255,255,255,.05);
+    color: var(--clr-light);
+  }
+  .nav-item:hover .nav-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .nav-item.active {
+    background: rgba(255,255,255,.10);
+    color: var(--clr-light);
+  }
+  
+  .page {
+    grid-area: page;
+    padding: 1.5rem 1.8rem;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 680px) {
+    .dash-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 56px auto 1fr;
+      grid-template-areas:
+        "top"
+        "side"
+        "page";
+    }
+    .sidebar {
+      flex-direction: row;
+      justify-content: center;
+      padding: .4rem;
+      overflow-x: auto;
+    }
+    .nav-label { display: none; } 
+  }
+  

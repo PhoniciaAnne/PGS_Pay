@@ -1,0 +1,59 @@
+.bills-page       { padding:1.6rem 1.2rem; animation:fade .3s ease; }
+.page-head        { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
+.tools            { display:flex; gap:.8rem; flex-wrap:wrap; }
+.toast            { margin:.8rem 0; font-weight:600; color:#d63939; }
+
+.search{
+  border:1px solid #ccd0e3; border-radius:8px; padding:.5rem .8rem;
+  min-width:220px; outline:none; transition:.2s;
+}
+.search:focus{ border-color:#5067ff; box-shadow:0 0 0 2px rgba(80,103,255,.2); }
+
+.bill-grid{
+  margin-top:1rem;
+  display:grid; gap:1rem;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+}
+
+.bill-card{
+  background:#fff; border-radius:12px; padding:1rem 1.2rem;
+  box-shadow:0 3px 12px rgba(0,0,0,.05);
+  display:flex; flex-direction:column; gap:.25rem;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.bill-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.bill-card .row span{ font-weight:600; color:#243268; margin-right:4px; }
+
+.status{
+  align-self:flex-start;
+  margin-top:.4rem;
+  padding:2px 8px; font-size:.78rem; font-weight:600;
+  border-radius:6px; text-transform:uppercase;
+}
+.status.paid    { background:#e9f7ef; color:#0f9155; }
+.status.pending { background:#fff9e6; color:#d4a600; }
+.status.overdue { background:#ffeaea; color:#d63939; }
+
+@keyframes fade{ from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:none} }
+
+.controls-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .filter-group,
+  .sort-group {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .sort-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }

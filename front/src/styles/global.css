@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .bills-page  { padding: 1.5rem 1rem; }
+.bill-grid   { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; }
+.bill-card   { background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.06); padding:1rem; }
+.bill-card .row span { font-weight:600; margin-right:4px; }
+
+.modal-overlay { background:rgba(0,0,0,.55); position:fixed; inset:0; display:flex; align-items:center; justify-content:center; }
+.pay-modal     { background:#fff; border-radius:10px; width:320px; padding:1.5rem; outline:none; }
+.pay-modal h3  { margin-top:0; }
+.pwd-input     { width:100%; padding:.6rem .8rem; margin:.8rem 0 1rem; border:1px solid #ccc; border-radius:6px; }
+.modal-actions { display:flex; gap:.6rem; justify-content:flex-end; }
+
+.edit-bill-page {
+    padding: 2rem;
+  }
+  .status {
+    margin-bottom: 1rem;
+    color: #007700;
+  }
+  .bill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .bill-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .bill-item.active,
+  .bill-item:hover {
+    background: #f0f8ff;
+  }
+  .edit-form {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+  }
+  .edit-form h3 {
+    margin-top: 0;
+  }
+  .edit-form label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  .edit-form input {
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: .5rem;
+  }
+  
